@@ -1,0 +1,16 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, number_of_item INTEGER, price INTEGER);
+INSERT INTO store VALUES (1, "onesie", 10, 5);
+INSERT INTO store VALUES (2, "pants",  12, 5);
+INSERT INTO store VALUES (3, "tee-shirt", 8, 4);
+INSERT INTO store VALUES (4, "shorts", 8, 7);
+INSERT INTO store VALUES (5, "diapers", 10,20);
+INSERT INTO store VALUES (6, "socks", 6, 5);
+INSERT INTO store VALUES (7, "teething toys", 5, 3);
+INSERT INTO store VALUES (8, "breast pump", 12, 150);
+INSERT INTO store VALUES (9, "sound machine", 6, 78);
+INSERT INTO store VALUES (10, "nipple sheild", 5, 8);
+INSERT INTO store VALUES (11, "romper", 8, 9);
+INSERT INTO store VALUES (12, "bottles", 14, 25);
+INSERT INTO store VALUES (13, "formula", 25, 28);
+INSERT INTO store VALUES (14, "lactacion cookies", 6, 15);
+INSERT INTO store VALUES (15, "diaper bag", 12, 58);
