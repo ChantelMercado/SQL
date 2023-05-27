@@ -1,3 +1,5 @@
+-- Create a Baby Store Database.
+
 CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, number_of_item INTEGER, price INTEGER);
 INSERT INTO store VALUES (1, "onesie", 10, 5);
 INSERT INTO store VALUES (2, "pants",  12, 5);
@@ -14,3 +16,14 @@ INSERT INTO store VALUES (12, "bottles", 14, 25);
 INSERT INTO store VALUES (13, "formula", 25, 28);
 INSERT INTO store VALUES (14, "lactacion cookies", 6, 15);
 INSERT INTO store VALUES (15, "diaper bag", 12, 58);
+
+-- Display the database ordered by price.
+SELECT * FROM store
+ORDER BY price desc;
+
+-- What is the avg price of the items in the store?
+SELECT AVG (price) "avg price"
+FROM STORE;
+
+-- How many items are in stock in the store?
+SELECT SUM (number_of_item) FROM store; 
