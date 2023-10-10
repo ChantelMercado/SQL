@@ -75,3 +75,15 @@ FROM fortune_companies
 WHERE industry="technology"
 GROUP BY industry
 HAVING SUM(revenue)>=300;
+
+
+#Assign all comapnies in healthcare insudtry as "mother friendly", 
+"acceptable" or "not mother friendly" based on the maternity leave offered at given companies.
+
+SELECT company_name,
+CASE WHEN maternity_leave_weeks>=11 THEN "mother friendly"
+WHEN maternity_leave_weeks>=9 THEN "acceptable"
+ELSE "not mother friendly"
+END as mother_friendliness
+FROM fortune_companies
+WHERE industry="Healthecare";
