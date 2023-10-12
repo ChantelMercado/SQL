@@ -87,3 +87,16 @@ ELSE "not mother friendly"
 END as mother_friendliness
 FROM fortune_companies
 WHERE industry="Healthcare";
+
+
+#Assign all companies in technology industry as 'excellent', 'okay' or 'not worth it' 
+based on the paid time off offered at the given companies
+
+SELECT company_name,
+CASE
+ WHEN paid_time_off_days >=20 THEN 'excellent'
+ WHEN paid_time_off_days >=18 THEN 'okay'
+ ELSE 'not worth it'
+END AS acceptable_paid_time_off
+FROM fortune_companies
+WHERE industry = 'Technology'
