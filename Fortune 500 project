@@ -72,7 +72,7 @@ ORDER BY maternity_leave_weeks desc;
 
 SELECT industry, SUM(revenue)AS SUM_revenue
 FROM fortune_companies
-WHERE industry="technology"
+WHERE industry="Technology"
 GROUP BY industry
 HAVING SUM(revenue)>=300;
 
@@ -86,4 +86,4 @@ WHEN maternity_leave_weeks>=9 THEN "acceptable"
 ELSE "not mother friendly"
 END as mother_friendliness
 FROM fortune_companies
-WHERE industry="Healthecare";
+WHERE industry="Healthcare";
