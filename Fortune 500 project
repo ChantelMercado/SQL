@@ -63,12 +63,16 @@ SELECT *
 FROM fortune_companies;
 
 
+#Find what companies have the most materitry leave weeks and paid time off, assign in descending order
+
 SELECT company_name, maternity_leave_weeks, paid_time_off_days
 FROM fortune_companies
 WHERE maternity_leave_weeks>=12
 OR paid_time_off_days>=20
 ORDER BY maternity_leave_weeks desc;
 
+
+#Find the sum revenue from technology, having greater than or equal to 300
 
 SELECT industry, SUM(revenue)AS SUM_revenue
 FROM fortune_companies
@@ -99,4 +103,14 @@ CASE
  ELSE 'not worth it'
 END AS acceptable_paid_time_off
 FROM fortune_companies
-WHERE industry = 'Technology'
+WHERE industry = 'Technology';
+
+
+
+
+#Select industry and sum or employees greater than 84000
+
+SELECT industry, SUM(employees) AS total_employees
+FROM fortune_companies
+GROUP BY industry
+HAVING total_employees >84000;
